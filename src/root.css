@@ -1,0 +1,20 @@
+:root {
+  --base-color: white;
+  --primary-text:  #cc5500 ;
+  --para-txt:black;
+  --secondary-text:black;
+  --links:black;
+  --head-3:black;
+  --card-bg:white;
+  --input-bg:white;
+}
+.darkmode {
+  --base-color: #0a0a14;
+  --primary-text:#ff8c00;
+  --para-txt:rgb(124, 124, 124);
+  --secondary-text:white;
+  --links:white;
+  --head-3:#FFFAF0;
+  --card-bg:rgb(30, 31, 37);
+  --input-bg:rgb(124, 124, 124);
+}

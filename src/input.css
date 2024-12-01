@@ -1,0 +1,100 @@
+:root {
+  --base-color: white;
+  --primary-text:  #cc5500 ;
+  --para-txt:black;
+  --secondary-text:black;
+  --links:black;
+  --head-3:black;
+  --card-bg:white;
+  --input-bg:white;
+}
+.darkmode {
+  --base-color: #0a0a14;
+  --primary-text:#ff8c00;
+  --para-txt:rgb(124, 124, 124);
+  --secondary-text:white;
+  --links:white;
+  --head-3:#FFFAF0;
+  --card-bg:rgb(30, 31, 37);
+  --input-bg:rgb(124, 124, 124);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.display-none {
+  @apply hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: var(--base-color);
+    font-family: "Montserrat", sans-serif;
+}
+nav{
+    position: fixed;
+}
+h1{
+    color: var(--primary-text);
+}
+#faqs{
+    color: var(--primary-text);
+}
+p{
+    color: var(--para-txt);
+}
+.logo{
+    color: var(--secondary-text);
+}
+h2{
+    color: var(--secondary-text);
+}
+.text-lg{
+    color: var(--secondary-text);
+}
+a:hover{
+    color: #cc5500 ;
+}
+h3{
+    color: var(--head-3);
+}
+.card{
+    background-color: var(--card-bg);
+}
+.btn{
+    color: var(--secondary-text);
+    background-color: var(--primary-text);
+    border: 1px solid var(--primary-text);
+}
+.btn:hover{
+    background-color: #a55216;
+}
+input, textarea{
+    background-color: var(--input-bg);
+    color: var(--links);
+}
+.img-darkmode{
+    background: none;
+    border: none;
+}
+.image{
+    width: 20vw;
+    height: auto;
+}
+@media (max-width:850px){
+    .image{
+        display: none;
+    }
+    form{
+        width: 90vw;
+        height: auto;
+        gap: none;
+    }
+}
+@media (max-width:730px){
+    .links{
+        display:none;
+    }
+}

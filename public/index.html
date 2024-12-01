@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroWebify - Convert Your websites in a click</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../src/root.css">
+    <link rel="stylesheet" href="../src/input.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="">
+    <nav class="flex items-center justify-between px-6 py-4 sticky">
+        <div class="flex items-center space-x-3">
+            <img src="img/retrologo.png" alt="Logo" class="w-10 h-10">
+            <span class="logo text-2xl font-bold">RetroWebify</span>
+        </div>
+        <div class="flex items-center space-x-6">
+            <a href="#home" class="text-lg links">Home</a>
+            <a href="#features" class="text-lg links">Features</a>
+            <a href="#about" class="text-lg links">About Us</a>
+            <a href="#contact" class="text-lg links">Contact Us</a>
+            <button onclick="darkMode()" id="darkModeToggle" class="button-image">
+            <img class="img-darkmode w-8 h-8 border-none" src="img/dark_mode.png" alt="darkmode"/>
+          </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section id="home" class="px-6 py-14">
+        <h1 class="text-5xl font-bold text-center">Welcome to RetroWebify</h1>
+        <p class="mt-4 text-lg text-center">
+            Transform any modern website into a nostalgic 90s masterpiece with just a click!
+        </p>
+    </section>
+    <div class="p-6 text-center w-full rounded-lg shadow-md">
+        <h2 class="text-3xl text-center font-bold mb-4">Paste Your Url Here</h2>
+        <input type="text" id="websiteUrl" placeholder="Enter website URL" class="border text-center p-2 mb-4 max-w-100">
+        <button onclick="convertWebsite()" class="btn px-4 py-2 text-center rounded">Convert</button>
+        <div id="convertedWebsite" class="mt-6 text-center">
+            <iframe id="websiteFrame" class="w-full h-96 text-center overflow-auto" frameborder="0"></iframe>
+        </div>
+    </div>
+    <!-- Features Section -->
+    <section id="features" class="px-6 py-12 ">
+        <h2 class="text-3xl font-bold text-center">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            <div class="card p-6 rounded-lg shadow text-center">
+                <h3 class="text-xl font-semibold">Responsive Design</h3>
+                <p class="mt-2 text-gray-600">Ensuring the best experience on all devices with seamless adaptability across screens of different sizes and resolutions.</p>
+            </div>
+            <div class="card p-6 rounded-lg shadow text-center">
+                <h3 class="text-xl font-semibold">User-Friendly</h3>
+                <p class="mt-2 text-gray-600">Crafted with simplicity and ease in mind, providing an intuitive interface that anyone can navigate effortlessly.</p>
+            </div>
+            <div class="card p-6 rounded-lg shadow text-center">
+                <h3 class="text-xl font-semibold">Real-Time Preview</h3>
+                <p class="mt-2 text-gray-600">Make changes and instantly see them reflected live, ensuring faster iterations and a smooth editing process.</p>
+            </div>
+            <div class="card p-6 rounded-lg shadow text-center">
+                <h3 class="text-xl font-semibold">SEO Optimization</h3>
+                <p class="mt-2 text-gray-600">Boost your site's visibility with advanced SEO techniques to ensure higher rankings and greater reach online.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- About Us Section -->
+    <section id="about" class="px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold ">About Us</h2>
+        <p class="mt-4 text-lg ">
+            Retrowebify is your ultimate destination for bringing modern websites into the realm of timeless design. Whether you want to give your site a vintage makeover or explore creative retro-inspired styles, Retrowebify offers seamless tools and expert solutions to make your vision a reality. Experience the perfect blend of classic aesthetics and cutting-edge functionality with Retrowebify.
+        </p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="px-6 py-12">
+        <h2 class="text-3xl font-bold text-center ">Contact Us</h2>
+        <div id="fadeElement" class="opacity-0 translate-y-10 transition-all duration-1000 ease-out hover:opacity-100 hover:translate-y-0">
+        <div class="grid grid-cols-3 gap-1">
+        <div class="flex flex-wrap justify-around">
+            <img src="./img/img1.webp" alt="img1" class="image md:display-none rounded-lg">
+        </div>
+        <div class="flex flex-wrap justify-around">
+        <form class="w-full" action="mailto:ahadabdul9976@gmail.com" method="post" enctype="text/plain">
+            <div>
+                <label for="name" class="block text-lg">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-2 ">
+            </div>
+            <div>
+                <label for="email" class="block text-lg">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 rounded-md border border-gray-300  focus:ring-2">
+            </div>
+            <div>
+                <label for="phone" class="block text-lg">Phone</label>
+                <input type="tel" id="email" name="phone" class="w-full px-4 py-2 rounded-md border border-gray-300  focus:ring-2">
+            </div>
+            <div>
+                <label for="message" class="block text-lg">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-md border border-gray-300 focus:ring-2"></textarea>
+            </div>
+            <button type="submit" class="btn px-6 py-2 rounded-md">Submit</button>
+        </form>
+        </div>
+        <div class="flex flex-wrap justify-around">
+        <img src="./img/img2.webp" alt="img2" class="image md:display-none rounded-lg">
+        </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="px-6 py-12">
+        <h2 class="text-3xl font-bold text-center">FAQs</h2>
+        <div class="mt-6 space-y-4">
+            <div class="card p-4 rounded-md shadow">
+                <h3 class="font-semibold text-lg">What is RetroWebify?</h3>
+                <p class="mt-2 text-gray-600">RetroWebify is a tool that converts modern websites into 90s-style designs.</p>
+            </div>
+            <div class="card p-4 rounded-md shadow">
+                <h3 class="font-semibold text-lg">Is it free to use?</h3>
+                <p class="mt-2 text-gray-600">Yes, RetroWebify is completely free for personal use.</p>
+            </div>
+            <div class="card p-4 rounded-md shadow">
+                <h3 class="font-semibold text-lg">Do I need coding skills?</h3>
+                <p class="mt-2 text-gray-600">No, RetroWebify is user-friendly and requires no prior coding experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer px-6 py-4">
+        <p class="text-center text-lg">
+            © 2024 RetroWebify. All rights reserved.
+        </p>
+    </footer>
+
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
